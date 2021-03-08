@@ -1,0 +1,14 @@
+<% field.schema.each.with_index do |(k, type), key_i| %>
+<td>
+  <%= field.input type, nil, row[k], class: 'json_array_field__input', data: { key: k } %>
+</td>
+
+<% if key_i == field.schema.size - 1 %>
+<td>
+  <a class="text-color-red json_array_field__remove_row" href="#">
+    <%= I18n.t('administrate.actions.destroy') %>
+  </a>
+</td>
+<% end %>
+
+<% end %>

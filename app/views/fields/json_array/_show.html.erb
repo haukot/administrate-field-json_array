@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <%= render 'fields/json_array/header', field: field %>
+  </thead>
+  <tbody>
+    <% field.values.each do |row| %>
+      <tr>
+      <% field.schema.keys.each do |k| %>
+        <td><%= row[k] %></td>
+      <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

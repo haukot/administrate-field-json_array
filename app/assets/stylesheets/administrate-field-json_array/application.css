@@ -1,0 +1,12 @@
+/*
+*= require_self
+*= require_tree .
+*/
+
+.json_array_field__add_row {
+    float: right;
+}
+
+.json_array_field__template_row {
+    display: none;
+}

@@ -1,0 +1,34 @@
+<div class="field-unit__label">
+  <%= f.label field.attribute %>
+</div>
+
+<div class="field-unit__field json_array_field__base">
+  <table>
+    <thead>
+
+      <%= render 'fields/json_array/header', field: field %>
+      <th></th>
+
+    </thead>
+
+    <tbody>
+      <tr class="json_array_field__template_row">
+        <%= render 'fields/json_array/row', row: {}, field: field %>
+      </tr>
+
+      <% field.values.each do |row| %>
+      <tr>
+        <%= render 'fields/json_array/row', row: row, field: field %>
+      </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+
+  <button class="json_array_field__add_row" type='button'>
+    <%= I18n.t("activerecord.attributes.#{field.resource.class.name.underscore}.#{field.attribute.to_s}_field.add", default: 'Add') %>
+  </button>
+
+
+  <%= f.hidden_field field.attribute, value: field.values.to_json, class: 'json_array_field__data_field' %>
+</div>
