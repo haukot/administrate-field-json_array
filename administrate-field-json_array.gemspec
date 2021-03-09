@@ -2,7 +2,7 @@ $LOAD_PATH.push File.expand_path('lib', __dir__)
 
 Gem::Specification.new do |gem|
   gem.name = 'administrate-field-json_array'
-  gem.version = '0.1.1'
+  gem.version = '0.1.2'
   gem.authors = ['Dmitry Davydov']
   gem.email = ['haudvd@gmail.com']
   gem.homepage = 'https://github.com/haukot/administrate-field-json_array'
