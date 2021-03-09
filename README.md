@@ -33,7 +33,7 @@ Currently supported `:number`, `:text`(textarea) and `:string`.
 ```ruby
 ATTRIBUTE_TYPES = {
   # ...
-  details: Field::JSONArray.with_options(schema: { recipe: :number, description: :text }),
+  recipe: Field::JSONArray.with_options(schema: { rank: :number, description: :text }),
 }.freeze
 ```
 
@@ -62,8 +62,8 @@ end
 Example:
 
 ```ruby
-def details=(value)
-  self[:details] = value.is_a?(String) ? JSON.parse(value) : value
+def recipe=(value)
+  self[:recipe] = value.is_a?(String) ? JSON.parse(value) : value
 end
 ```
 
